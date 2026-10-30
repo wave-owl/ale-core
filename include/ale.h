@@ -54,11 +54,12 @@ enum {
 };
 
 /* Receiver flags (ale_rx_create). */
-/* Reference behaviour of KiwiSDR in every detail (README "Quirks", Q2 and Q6): the bit-exact
- * differential tests set it. Without it (the station) a DATA word that repeats the previous
- * one is still appended after a new address section starts, so a repeated "TIS DL1 / DATA
- * ABC" sounding reads DL1ABC instead of DL1, and a word whose Golay decode failed is never
- * passed on (INV-1750; the reference's locked-phase path that would pass it is unreachable). */
+/* Reference behaviour of KiwiSDR in every detail (README "Quirks", Q2, Q6, Q9): the
+ * bit-exact differential tests set it. Without it (the station) a DATA word that repeats the
+ * previous one is still appended after a new address section starts, so a repeated "TIS DL1 /
+ * DATA ABC" sounding reads DL1ABC instead of DL1; the symbol-timing sums are halved instead of
+ * cleared every 49 symbols; and a word whose Golay decode failed is never passed on
+ * (INV-1750; the reference's locked-phase path that would pass it is unreachable). */
 #define ALE_RX_F_REFERENCE 0x1
 /* Bench only (R-1752.3): words keep the systematic data bits of the voted halves without
  * Golay correction; Golay still gates the word sync (the receiver has no other way to find

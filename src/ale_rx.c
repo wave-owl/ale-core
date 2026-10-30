@@ -690,7 +690,17 @@ static void do_modem1(ale_rx *r, int eof)
         if (r->samp_count_per_symbol == 0) {
             r->mag_hist_offset_per_word = (r->mag_hist_offset_per_word + 1)
                                           % ALE_SYMBOLS_PER_WORD;
-            if (r->mag_hist_offset_per_word == 0) memset(r->mag_sum, 0, sizeof(r->mag_sum));
+            if (r->mag_hist_offset_per_word == 0) {
+                if (r->flags & ALE_RX_F_REFERENCE) {
+                    memset(r->mag_sum, 0, sizeof(r->mag_sum));
+                } else {
+                    /* station (README quirk Q9): halve instead of clearing, so the timing
+                     * estimate does not restart from a few symbols in the middle of a word */
+                    int t, f;
+                    for (t = 0; t < ALE_NTIME; t++)
+                        for (f = 0; f < ALE_FFT_SIZE; f++) r->mag_sum[t][f] /= 2;
+                }
+            }
         }
     }
 
@@ -805,6 +815,13 @@ int32_t ale_bench_decode_word(const float *x, int mode, int *bad_votes, int *err
     int k, i, n, nf;
     uint32_t worda = 0, wordb = 0, da, db;
     int ea, eb;
+    double cs[ALE_HALF_FFT_SIZE][ALE_FFT_SIZE], sn[ALE_HALF_FFT_SIZE][ALE_FFT_SIZE];
+    for (nf = 1; nf <= ALE_HALF_FFT_SIZE - 5; nf++)
+        for (n = 0; n < ALE_FFT_SIZE; n++) {
+            double ph = -2.0 * M_PI * nf * n / ALE_FFT_SIZE;
+            cs[nf][n] = cos(ph);
+            sn[nf][n] = sin(ph);
+        }
     for (k = 0; k < ALE_SYMBOLS_PER_WORD; k++) {
         const float *s = x + k * ALE_SYMBOL_SAMPLES;
         double best = -1.0;
@@ -812,9 +829,8 @@ int32_t ale_bench_decode_word(const float *x, int mode, int *bad_votes, int *err
         for (nf = 1; nf <= ALE_HALF_FFT_SIZE - 5; nf++) {
             double re = 0.0, im = 0.0, m;
             for (n = 0; n < ALE_FFT_SIZE; n++) {
-                double ph = -2.0 * M_PI * nf * n / ALE_FFT_SIZE;
-                re += s[n] * cos(ph);
-                im += s[n] * sin(ph);
+                re += s[n] * cs[nf][n];
+                im += s[n] * sn[nf][n];
             }
             m = re * re + im * im;
             if (m > best) { best = m; best_bin = nf; }
