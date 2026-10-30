@@ -1,0 +1,3 @@
+# name     upstream                                  mirror (wave-owl, push pending)          commit                                    licence
+KiwiSDR    https://github.com/jks-prv/KiwiSDR.git    https://github.com/wave-owl/KiwiSDR.git  3b570602a14161188f8c85eede62ab2a70e7ad66  GPL-3.0-or-later (extensions/ALE_2G/decode_ff*.{h,cpp} file headers)
+openALE    https://github.com/dl3hc/openALE.git      https://github.com/wave-owl/openALE.git  1f0fb89a4b3c9cd6b6cbb0a41e7ae8f817377b48  MIT (LICENSE)
