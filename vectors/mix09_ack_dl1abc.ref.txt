@@ -1,0 +1,1 @@
+  551: LSYM5 NTIME 7 sym_rv1 // ber[n]|26 < bestber|26 N // bestpos= 0|0| 7 Y // w=000102 [DATA] ctl(00) ctl(02) ctl(02) // WORD 

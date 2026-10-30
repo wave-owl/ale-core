@@ -1,0 +1,3 @@
+ 2205: LSYM1 NTIME12 sym_rv1 // ber[n]|26 < bestber|26 N // bestpos= 0|0|12 Y // w=000204 [DATA] ctl(00) ctl(04) ctl(04) // WORD 
+ 2760: LSYM4 NTIME 6 sym_rv1 // ber[n]|11 < bestber|26 Y // bestpos= 0|0| 6 Y // w=106143 [DATA] A(41) B(42) C(43) // WORD BEST
+ 2761: LSYM4 NTIME 7 sym_rv1 // ber[n]|13 < bestber|11 N // bestpos= 0|0| 7 Y // w=106143 [DATA] A(41) B(42) C(43) // WORD 

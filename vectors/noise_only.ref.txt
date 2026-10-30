@@ -1,0 +1,8 @@
+ 1608: LSYM8 NTIME10 sym_rv1 // ber[n]|26 < bestber|26 N // bestpos= 0|0|10 Y // w=000204 [DATA] ctl(00) ctl(04) ctl(04) // WORD 
+14754: LSYM8 NTIME15 sym_rv1 // ber[n]|26 < bestber|26 N // bestpos= 0|0|15 Y // w=000808 [DATA] ctl(00) ctl(10) ctl(08) // WORD 
+15043: LSYM8 NTIME15 sym_rv1 // ber[n]|26 < bestber|26 N // bestpos= 0|0|15 Y // w=000011 [DATA] ctl(00) ctl(00) ctl(11) // WORD 
+16138: LSYM1 NTIME 5 sym_rv1 // ber[n]|26 < bestber|26 N // bestpos= 0|0| 5 Y // w=000808 [DATA] ctl(00) ctl(10) ctl(08) // WORD 
+25652: LSYM8 NTIME16 sym_rv1 // ber[n]|26 < bestber|26 N // bestpos= 0|0|16 Y // w=000011 [DATA] ctl(00) ctl(00) ctl(11) // WORD 
+36231: LSYM3 NTIME 4 sym_rv1 // ber[n]|26 < bestber|26 N // bestpos= 0|0| 4 Y // w=0000a0 [DATA] ctl(00) ctl(01)  (20) // WORD 
+37908: LSYM0 NTIME15 sym_rv1 // ber[n]|26 < bestber|26 N // bestpos= 0|0|15 Y // w=000440 [DATA] ctl(00) ctl(08) @(40) // WORD 
+38626: LSYM8 NTIME 2 sym_rv1 // ber[n]|26 < bestber|26 N // bestpos= 0|0| 2 Y // w=000808 [DATA] ctl(00) ctl(10) ctl(08) // WORD 

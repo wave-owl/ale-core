@@ -1,0 +1,34 @@
+ 1907: LSYM2 NTIME 3 sym_rv1 // ber[n]| 4 < bestber|26 Y // bestpos= 0|0| 3 Y // w=7123b6 [TWAS] D(44) G(47) 6(36) // WORD BEST
+ 1908: LSYM2 NTIME 4 sym_rv1 // ber[n]| 2 < bestber| 4 Y // bestpos= 0|0| 4 Y // w=7123b6 [TWAS] D(44) G(47) 6(36) // WORD BEST
+ 2451: LSYM7 NTIME 3 sym_rv1 // ber[n]|18 < bestber|26 Y // bestpos= 4|0| 3 N // w=88d320 [FROM] #(23) &(26)  (20) // WORD 
+ 2452: LSYM7 NTIME 4 sym_rv1 // ber[n]|17 < bestber|26 Y // bestpos= 4|0| 4 Y // w=88d320 [FROM] #(23) &(26)  (20) // WORD BEST
+ 2740: LSYM6 NTIME 3 sym_rv1 // ber[n]| 2 < bestber|26 Y // bestpos= 4|0| 3 N // w=11a640 [DATA] F(46) L(4c) @(40) // WORD 
+ 2741: LSYM6 NTIME 4 sym_rv1 // ber[n]| 2 < bestber|26 Y // bestpos= 4|0| 4 Y // w=11a640 [DATA] F(46) L(4c) @(40) // WORD BEST
+ 3284: LSYM6 NTIME 3 sym_rv1 // ber[n]|21 < bestber|26 Y // bestpos= 4|0| 3 N // w=b891db [TIS]  b(62) #(23) [(5b) // WORD 
+ 3285: LSYM6 NTIME 4 sym_rv1 // ber[n]|21 < bestber|26 Y // bestpos= 4|0| 4 Y // w=b891db [TIS]  b(62) #(23) [(5b) // WORD BEST
+ 3573: LSYM2 NTIME 3 sym_rv1 // ber[n]| 3 < bestber|26 Y // bestpos= 4|0| 3 N // w=7123b6 [TWAS] D(44) G(47) 6(36) // WORD 
+ 3574: LSYM2 NTIME 4 sym_rv1 // ber[n]| 2 < bestber|26 Y // bestpos= 4|0| 4 Y // w=7123b6 [TWAS] D(44) G(47) 6(36) // WORD BEST
+>>>>  [00:00:01] [Sounding THIS WAS] [From: DG6FL] [His BER: 2]
+ 4117: LSYM7 NTIME 3 sym_rv1 // ber[n]|18 < bestber|26 Y // bestpos= 4|0| 3 N // w=88d320 [FROM] #(23) &(26)  (20) // WORD 
+ 4118: LSYM7 NTIME 4 sym_rv1 // ber[n]|17 < bestber|26 Y // bestpos= 4|0| 4 Y // w=88d320 [FROM] #(23) &(26)  (20) // WORD BEST
+ 4406: LSYM6 NTIME 3 sym_rv1 // ber[n]| 2 < bestber|26 Y // bestpos= 4|0| 3 N // w=11a640 [DATA] F(46) L(4c) @(40) // WORD 
+ 4407: LSYM6 NTIME 4 sym_rv1 // ber[n]| 2 < bestber|26 Y // bestpos= 4|0| 4 Y // w=11a640 [DATA] F(46) L(4c) @(40) // WORD BEST
+ 4950: LSYM6 NTIME 3 sym_rv1 // ber[n]|21 < bestber|26 Y // bestpos= 4|0| 3 N // w=b891db [TIS]  b(62) #(23) [(5b) // WORD 
+ 4951: LSYM6 NTIME 4 sym_rv1 // ber[n]|21 < bestber|26 Y // bestpos= 4|0| 4 Y // w=b891db [TIS]  b(62) #(23) [(5b) // WORD BEST
+ 5239: LSYM2 NTIME 3 sym_rv1 // ber[n]| 3 < bestber|26 Y // bestpos= 4|0| 3 N // w=7123b6 [TWAS] D(44) G(47) 6(36) // WORD 
+ 5240: LSYM2 NTIME 4 sym_rv1 // ber[n]| 2 < bestber|26 Y // bestpos= 4|0| 4 Y // w=7123b6 [TWAS] D(44) G(47) 6(36) // WORD BEST
+>>>>  [00:00:02] [Sounding THIS WAS] [From: DG6FL] [His BER: 2]
+ 5783: LSYM7 NTIME 3 sym_rv1 // ber[n]|18 < bestber|26 Y // bestpos= 4|0| 3 N // w=88d320 [FROM] #(23) &(26)  (20) // WORD 
+ 5784: LSYM7 NTIME 4 sym_rv1 // ber[n]|17 < bestber|26 Y // bestpos= 4|0| 4 Y // w=88d320 [FROM] #(23) &(26)  (20) // WORD BEST
+ 6072: LSYM6 NTIME 3 sym_rv1 // ber[n]| 2 < bestber|26 Y // bestpos= 4|0| 3 N // w=11a640 [DATA] F(46) L(4c) @(40) // WORD 
+ 6073: LSYM6 NTIME 4 sym_rv1 // ber[n]| 2 < bestber|26 Y // bestpos= 4|0| 4 Y // w=11a640 [DATA] F(46) L(4c) @(40) // WORD BEST
+ 6616: LSYM6 NTIME 3 sym_rv1 // ber[n]|21 < bestber|26 Y // bestpos= 4|0| 3 N // w=b891db [TIS]  b(62) #(23) [(5b) // WORD 
+ 6617: LSYM6 NTIME 4 sym_rv1 // ber[n]|21 < bestber|26 Y // bestpos= 4|0| 4 Y // w=b891db [TIS]  b(62) #(23) [(5b) // WORD BEST
+ 6905: LSYM2 NTIME 3 sym_rv1 // ber[n]| 1 < bestber|26 Y // bestpos= 4|0| 3 N // w=7123b6 [TWAS] D(44) G(47) 6(36) // WORD 
+ 6906: LSYM2 NTIME 4 sym_rv1 // ber[n]| 0 < bestber|26 Y // bestpos= 4|0| 4 Y // w=7123b6 [TWAS] D(44) G(47) 6(36) // WORD BEST
+>>>>  [00:00:03] [Sounding THIS WAS] [From: DG6FL] [His BER: 2]
+ 7449: LSYM7 NTIME 3 sym_rv1 // ber[n]|20 < bestber|26 Y // bestpos= 4|0| 3 N // w=88d320 [FROM] #(23) &(26)  (20) // WORD 
+ 7450: LSYM7 NTIME 4 sym_rv1 // ber[n]|19 < bestber|26 Y // bestpos= 4|0| 4 Y // w=88d320 [FROM] #(23) &(26)  (20) // WORD BEST
+ 7738: LSYM6 NTIME 3 sym_rv1 // ber[n]| 0 < bestber|26 Y // bestpos= 4|0| 3 N // w=11a640 [DATA] F(46) L(4c) @(40) // WORD 
+ 7739: LSYM6 NTIME 4 sym_rv1 // ber[n]| 0 < bestber|26 Y // bestpos= 4|0| 4 Y // w=11a640 [DATA] F(46) L(4c) @(40) // WORD BEST
+>>>>  [00:00:05] [Sounding THIS WAS] [From: DG6FL] [His BER: 0]

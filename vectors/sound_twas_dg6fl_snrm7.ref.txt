@@ -1,0 +1,9 @@
+ 4221: LSYM2 NTIME 5 sym_rv1 // ber[n]|17 < bestber|26 Y // bestpos= 0|0| 5 Y // w=7123b6 [TWAS] D(44) G(47) 6(36) // WORD BEST
+ 4222: LSYM2 NTIME 6 sym_rv1 // ber[n]|16 < bestber|17 Y // bestpos= 0|0| 6 Y // w=7123b6 [TWAS] D(44) G(47) 6(36) // WORD BEST
+ 5888: LSYM2 NTIME 6 sym_rv1 // ber[n]|17 < bestber|26 Y // bestpos= 6|0| 6 Y // w=7123b6 [TWAS] D(44) G(47) 6(36) // WORD BEST
+ 6720: LSYM4 NTIME 5 sym_rv1 // ber[n]|17 < bestber|26 Y // bestpos= 6|0| 5 N // w=11a640 [DATA] F(46) L(4c) @(40) // WORD 
+ 6721: LSYM5 NTIME 6 sym_rv1 // ber[n]|19 < bestber|26 Y // bestpos= 6|0| 6 Y // w=11a640 [DATA] F(46) L(4c) @(40) // WORD BEST
+ 7553: LSYM2 NTIME 5 sym_rv1 // ber[n]|15 < bestber|26 Y // bestpos= 6|0| 5 N // w=7123b6 [TWAS] D(44) G(47) 6(36) // WORD 
+ 7554: LSYM2 NTIME 6 sym_rv1 // ber[n]|13 < bestber|26 Y // bestpos= 6|0| 6 Y // w=7123b6 [TWAS] D(44) G(47) 6(36) // WORD BEST
+>>>>  [00:00:03] [Sounding THIS WAS] [From: DG6FL] [His BER: 19]
+>>>>  [00:00:05] [Sounding THIS WAS] [From: DG6] [His BER: 13]
