@@ -5,6 +5,10 @@ Run: python scripts/repository_sbom.py --root . --output-dir build/sbom
 The root must be a clean tagged Git checkout with a GitHub origin. No repository
 code, CMake, package hooks, or downloaded source is executed. Syft scans an exported,
 tracked source tree, never the working directory or .git/build/generated reports.
+Remote gitlinks/build sources contribute package manifests/lockfiles to Syft, not
+every source blob; their exact Git trees, CMake requirements and declared evidence
+remain inventoried. Reference-only trees contribute license/provenance evidence,
+never installed/shipped package discoveries.
 
 Optional .sbom.json (paths are POSIX, relative to their containing repository):
 {
@@ -78,6 +82,15 @@ REPOSITORY = re.compile(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+\Z")
 COMMIT = re.compile(r"[0-9a-f]{40}\Z")
 EXCLUDED_DIRS = {".git", "build", "builds", "_build", "dist", "target", "CMakeFiles"}
 REPORTS = {"SBOM.cdx.json", "SBOM.md"}
+REMOTE_MANIFESTS = {
+    "package.json", "package-lock.json", "npm-shrinkwrap.json", "yarn.lock",
+    "pnpm-lock.yaml", "bun.lock", "bun.lockb", "pyproject.toml", "setup.py",
+    "setup.cfg", "Pipfile", "Pipfile.lock", "poetry.lock", "uv.lock",
+    "Cargo.toml", "Cargo.lock", "go.mod", "go.sum", "Gemfile", "Gemfile.lock",
+    "composer.json", "composer.lock", "pom.xml", "build.gradle", "build.gradle.kts",
+    "libs.versions.toml", "packages.lock.json", "conanfile.txt", "conanfile.py",
+    "vcpkg.json", "vcpkg-configuration.json", "Directory.Packages.props",
+}
 
 
 class EvidenceError(RuntimeError):
@@ -266,7 +279,9 @@ class Inventory:
             full = prefix + path
             if entry["type"] == "blob":
                 self.files[full] = dict(entry, **({"repository": repo} if repo else {}))
-                if path.endswith(".cmake") or PurePosixPath(path).name == "CMakeLists.txt":
+                excluded = any(full.startswith(item) for item in self.excluded_prefixes)
+                is_cmake = path.endswith(".cmake") or PurePosixPath(path).name == "CMakeLists.txt"
+                if is_cmake and not excluded:
                     self.cmake(parent, full, self.read_file(full))
             elif entry["type"] == "commit":
                 declaration = self.config.get("gitlinks", {}).get(full)
@@ -371,6 +386,15 @@ class Inventory:
                     parts[-1] in REPORTS, parts[-1].endswith(".cdx.json"),
                 )):
                     continue
+                if "repository" in entry:
+                    name = parts[-1]
+                    is_manifest = any((
+                        name in REMOTE_MANIFESTS,
+                        name.startswith("requirements") and name.endswith(".txt"),
+                        name.endswith((".csproj", ".nuspec", ".gemspec")),
+                    ))
+                    if not is_manifest:
+                        continue
                 destination = staging / path
                 destination.parent.mkdir(parents=True, exist_ok=True)
                 destination.write_bytes(self.read_file(path))
@@ -458,8 +482,19 @@ class Inventory:
             self.license_evidence(component, declaration["licenses"], self.files)
             for name in declaration["evidence"]:
                 self.read_file(safe_path(name))
-            manifest = [{"path": name, "sha256": sha256(self.read_file(name))}
-                        for name in sorted(set(files + declaration["evidence"] + declaration["licenses"]))]
+            manifest = []
+            for name in sorted(set(files + declaration["evidence"] + declaration["licenses"])):
+                entry = self.files[name]
+                if entry.get("mode") == "120000":
+                    content = (self.read_remote(entry["repository"], entry)
+                               if "repository" in entry else
+                               git(self.root, "cat-file", "blob", entry["sha"]))
+                    manifest.append({
+                        "path": name, "sha256": sha256(content),
+                        "kind": "symlink-target-blob-not-followed",
+                    })
+                else:
+                    manifest.append({"path": name, "sha256": sha256(self.read_file(name))})
             property_value(component, "sbom:role", "declared-vendored-source")
             property_value(component, "sbom:source-manifest", json.dumps(manifest, sort_keys=True))
             property_value(component, "sbom:provenance-verification",
