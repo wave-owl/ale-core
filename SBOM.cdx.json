@@ -13,7 +13,7 @@
           "content": "ff888f447131f8f4371d0b0abb3c86d46a3b47a0f1280a6087e1ff45f83893bf"
         }
       ],
-      "name": "/Users/gerolfziegenhain/src/wave-owl/local/sbom-core-preflight-v2/ale-core/.source-input/.github/workflows/ci.yml",
+      "name": "tracked-source/.github/workflows/ci.yml",
       "type": "file"
     },
     {

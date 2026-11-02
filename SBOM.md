@@ -29,7 +29,7 @@ None.
 | src/ale_tables.c | 3b570602a14161188f8c85eede62ab2a70e7ad66 | declared-vendored-source | unresolved; manual review required |
 | src/ale_tx.c | 1f0fb89a4b3c9cd6b6cbb0a41e7ae8f817377b48 | declared-vendored-source | unresolved; manual review required |
 | actions/checkout | v4 | Syft source/package discovery | unresolved |
-| /Users/gerolfziegenhain/src/wave-owl/local/sbom-core-preflight-v2/ale-core/.source-input/.github/workflows/ci.yml | unresolved | Syft source/package discovery | unresolved |
+| tracked-source/.github/workflows/ci.yml | unresolved | Syft source/package discovery | unresolved |
 
 License evidence paths/hashes, source manifests, model hashes and conditional
 CMake declarations are recorded in SBOM.cdx.json. Declared upstream pins do not
