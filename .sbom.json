@@ -1,0 +1,44 @@
+{
+  "gitlinks": {},
+  "vendored": [
+    {
+      "path": "src/ale_rx.c",
+      "repository": "wave-owl/KiwiSDR",
+      "commit": "3b570602a14161188f8c85eede62ab2a70e7ad66",
+      "licenses": [
+        "LICENSE"
+      ],
+      "evidence": [
+        "README.md",
+        "ref/PINS"
+      ]
+    },
+    {
+      "path": "src/ale_tables.c",
+      "repository": "wave-owl/KiwiSDR",
+      "commit": "3b570602a14161188f8c85eede62ab2a70e7ad66",
+      "licenses": [
+        "LICENSE"
+      ],
+      "evidence": [
+        "README.md",
+        "ref/PINS"
+      ]
+    },
+    {
+      "path": "src/ale_tx.c",
+      "repository": "wave-owl/openALE",
+      "commit": "1f0fb89a4b3c9cd6b6cbb0a41e7ae8f817377b48",
+      "licenses": [
+        "README.md"
+      ],
+      "evidence": [
+        "README.md",
+        "ref/PINS"
+      ]
+    }
+  ],
+  "references": [],
+  "models": [],
+  "external_libraries": []
+}

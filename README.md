@@ -130,3 +130,12 @@ Seamons ZL4VO/KF6VO for KiwiSDR), which states that significant portions are bas
 LinuxALE (Copyright 2000-2001 Charles Brain G4GUO and Ilkka Toivanen, GNU GPL). The encoder
 follows openALE (MIT; Copyright 2024 PC-ALE 2.0 Contributors, Alex Pennington AAM402/KY4OLB;
 2025-2026 openALE Contributors, dl3hc). MIL-STD-188-141B is a public US DoD standard.
+
+<!-- wave-owl-source-sbom-docs:start -->
+## Source SBOMs
+
+Every published release, including prereleases, receives automatically generated
+CycloneDX JSON and readable documentation. See the [initial source report](SBOM.md),
+[CycloneDX JSON](SBOM.cdx.json) and [release policy](SBOM-POLICY.md) for scope,
+release assets, provenance declarations and reproduction instructions.
+<!-- wave-owl-source-sbom-docs:end -->

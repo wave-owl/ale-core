@@ -1,0 +1,288 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "7561d461b00ff11d",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "46d76e75865f36abfcd8e91eba4c56658d50661a"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "ff888f447131f8f4371d0b0abb3c86d46a3b47a0f1280a6087e1ff45f83893bf"
+        }
+      ],
+      "name": "/Users/gerolfziegenhain/src/wave-owl/local/sbom-core-preflight-v2/ale-core/.source-input/.github/workflows/ci.yml",
+      "type": "file"
+    },
+    {
+      "bom-ref": "pkg:github/actions/checkout@v4?package-id=fa2e67b8c20f75f3",
+      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:v4:*:*:*:*:*:*:*",
+      "name": "actions/checkout",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/ci.yml"
+        }
+      ],
+      "purl": "pkg:github/actions/checkout@v4",
+      "type": "library",
+      "version": "v4"
+    },
+    {
+      "bom-ref": "vendored:src/ale_rx.c",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/wave-owl/KiwiSDR/tree/3b570602a14161188f8c85eede62ab2a70e7ad66"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "src/ale_rx.c",
+      "properties": [
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        },
+        {
+          "name": "sbom:role",
+          "value": "declared-vendored-source"
+        },
+        {
+          "name": "sbom:source-manifest",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986\"}, {\"path\": \"README.md\", \"sha256\": \"c32b0dcb31dd7ca2357f843e296b9267e0f02340e04cb9e3a95aa407e07ca984\"}, {\"path\": \"ref/PINS\", \"sha256\": \"020cc544913cd5c5f85ca0cba231ceefadb2b341f9a273cfc7474a2fc685ea25\"}, {\"path\": \"src/ale_rx.c\", \"sha256\": \"c6bb94298410d3300dbe270563c447186d8c232a63de7a1b66dd56d2fe54b051\"}]"
+        },
+        {
+          "name": "sbom:provenance-verification",
+          "value": "declared origin; local blob hashes do not establish upstream equivalence"
+        }
+      ],
+      "type": "library",
+      "version": "3b570602a14161188f8c85eede62ab2a70e7ad66"
+    },
+    {
+      "bom-ref": "vendored:src/ale_tables.c",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/wave-owl/KiwiSDR/tree/3b570602a14161188f8c85eede62ab2a70e7ad66"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "src/ale_tables.c",
+      "properties": [
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        },
+        {
+          "name": "sbom:role",
+          "value": "declared-vendored-source"
+        },
+        {
+          "name": "sbom:source-manifest",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986\"}, {\"path\": \"README.md\", \"sha256\": \"c32b0dcb31dd7ca2357f843e296b9267e0f02340e04cb9e3a95aa407e07ca984\"}, {\"path\": \"ref/PINS\", \"sha256\": \"020cc544913cd5c5f85ca0cba231ceefadb2b341f9a273cfc7474a2fc685ea25\"}, {\"path\": \"src/ale_tables.c\", \"sha256\": \"045081a14635085e62467bbdc5df8fd500810e7e340a5638685e76ce04bdd46a\"}]"
+        },
+        {
+          "name": "sbom:provenance-verification",
+          "value": "declared origin; local blob hashes do not establish upstream equivalence"
+        }
+      ],
+      "type": "library",
+      "version": "3b570602a14161188f8c85eede62ab2a70e7ad66"
+    },
+    {
+      "bom-ref": "vendored:src/ale_tx.c",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/wave-owl/openALE/tree/1f0fb89a4b3c9cd6b6cbb0a41e7ae8f817377b48"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "src/ale_tx.c",
+      "properties": [
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"README.md\", \"sha256\": \"c32b0dcb31dd7ca2357f843e296b9267e0f02340e04cb9e3a95aa407e07ca984\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        },
+        {
+          "name": "sbom:role",
+          "value": "declared-vendored-source"
+        },
+        {
+          "name": "sbom:source-manifest",
+          "value": "[{\"path\": \"README.md\", \"sha256\": \"c32b0dcb31dd7ca2357f843e296b9267e0f02340e04cb9e3a95aa407e07ca984\"}, {\"path\": \"ref/PINS\", \"sha256\": \"020cc544913cd5c5f85ca0cba231ceefadb2b341f9a273cfc7474a2fc685ea25\"}, {\"path\": \"src/ale_tx.c\", \"sha256\": \"7ea7d3f09d1fe583e90f9c392eb738dcc8aaef8a56fdc9ded309c2ba702a3add\"}]"
+        },
+        {
+          "name": "sbom:provenance-verification",
+          "value": "declared origin; local blob hashes do not establish upstream equivalence"
+        }
+      ],
+      "type": "library",
+      "version": "1f0fb89a4b3c9cd6b6cbb0a41e7ae8f817377b48"
+    }
+  ],
+  "compositions": [
+    {
+      "aggregate": "unknown",
+      "assemblies": [
+        "git:https://github.com/wave-owl/ale-core@8692cdf55fc716acef60df299768f3ca0daf5556"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [],
+      "ref": "7561d461b00ff11d"
+    },
+    {
+      "dependsOn": [
+        "7561d461b00ff11d",
+        "pkg:github/actions/checkout@v4?package-id=fa2e67b8c20f75f3",
+        "vendored:src/ale_rx.c",
+        "vendored:src/ale_tables.c",
+        "vendored:src/ale_tx.c"
+      ],
+      "ref": "git:https://github.com/wave-owl/ale-core@8692cdf55fc716acef60df299768f3ca0daf5556"
+    },
+    {
+      "dependsOn": [],
+      "ref": "pkg:github/actions/checkout@v4?package-id=fa2e67b8c20f75f3"
+    },
+    {
+      "dependsOn": [],
+      "ref": "vendored:src/ale_rx.c"
+    },
+    {
+      "dependsOn": [],
+      "ref": "vendored:src/ale_tables.c"
+    },
+    {
+      "dependsOn": [],
+      "ref": "vendored:src/ale_tx.c"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "git:https://github.com/wave-owl/ale-core@8692cdf55fc716acef60df299768f3ca0daf5556",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/wave-owl/ale-core/tree/8692cdf55fc716acef60df299768f3ca0daf5556"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "wave-owl/ale-core",
+      "properties": [
+        {
+          "name": "sbom:role",
+          "value": "source-root"
+        },
+        {
+          "name": "sbom:git-commit",
+          "value": "8692cdf55fc716acef60df299768f3ca0daf5556"
+        },
+        {
+          "name": "sbom:git-tree",
+          "value": "84d89ed3b1ef37bf5ec017116c12280d5edd0f88"
+        },
+        {
+          "name": "sbom:source-repository",
+          "value": "https://github.com/wave-owl/ale-core"
+        },
+        {
+          "name": "sbom:release-tags",
+          "value": "[\"v0.1.0\"]"
+        },
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        }
+      ],
+      "type": "application",
+      "version": "8692cdf55fc716acef60df299768f3ca0daf5556"
+    },
+    "properties": [
+      {
+        "name": "sbom:scope",
+        "value": "Source repository inventory only; completeness is UNKNOWN. Syft inventories tracked source/package manifests. Gitlinks and declared vendored/model evidence are inspected at immutable pins. CMake declarations are conditional requirements, not resolved installations. This is NOT proof of operating-system packages, static-link closure, build-time resolution, or the contents of release binaries."
+      },
+      {
+        "name": "sbom:generation-status",
+        "value": "success"
+      },
+      {
+        "name": "sbom:generation-errors",
+        "value": "[]"
+      }
+    ],
+    "timestamp": "2026-11-02T16:49:26.791397+00:00",
+    "tools": {
+      "components": [
+        {
+          "author": "anchore",
+          "name": "syft",
+          "type": "application",
+          "version": "1.55.0"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:2873e375-6454-40c9-9fd0-96d9a12911f6",
+  "specVersion": "1.6",
+  "version": 1
+}
